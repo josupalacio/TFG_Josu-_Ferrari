@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus</title>
+    <style>
+        * {
+            background-color: rgb(35,39,47,255);
+        }
+        #tituloexageradamentegrande {
+            font-size: 10vw; /* Se adapta al tamaño de la pantalla */
+            font-weight: bold;
+            color: white;
+            text-align: center;
+        }
+        #main{
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            background-color: rgb(35, 39, 47);
+            text-align: center; /* Asegura que el texto dentro esté centrado */
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div id="main">
+            <h1 id="tituloexageradamentegrande">INICIASTE SESIONNNNNN</h1>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- Aquí incluimos el script al final -->
+    <script>
+        //obtenemos el boton
+        const btnNightShift = document.getElementById("btnNightShift");
+
+        btnNightShift.onclick = function() {
+            document.body.style.backgroundColor = "#f4c4cc"; // Color corregido
+        };
+    </script>
+</body>
+</html>

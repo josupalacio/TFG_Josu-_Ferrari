@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus</title>
+    <style>
+        * {
+            background-color: rgb(35, 39, 47, 255);
+        }
+
+        #btnInicioSesion {
+            background-color: aliceblue;
+            width: 100px;
+            height: 50px;
+            border-radius: 15%;
+        }
+
+        #formInicioSesion {
+            /*background-color: red;*/
+            border: 1px solid rgb(0, 0, 0);
+            width: 500px;
+            height: 700px;
+            place-items: center;
+            display: grid;
+        }
+
+        main {
+            place-items: center;
+            height: 100vh;
+            display: grid;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="react.js">
+</head>
+
+<body>
+    <header>
+        <div class="icon">
+            <img src="lampIcon.png" alt="">
+        </div>
+        <div class="divNightShift">
+            <button id="btnNightShift"></button>
+        </div>
+    </header>
+    <main>
+        <!-- este va a ser el panel para iniciar sesion -->
+        <div id="formInicioSesion">
+            <!--Titulo-->
+            <h2 class="titulo">Inicio de sesión</h2>
+            <!--User Input-->
+            <input type="text" id="username" placeholder="Usuario" autocomplete="off" required>
+            <!--Password Input-->
+            <input type="password" id="password" placeholder="Constraseña" required>
+            <!--Login Button-->
+            <button id="btnInicioSesion" onclick="login()">Login</button>
+            <p id="error-message"></p>
+        </div>
+        <script src="script.js"></script>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
