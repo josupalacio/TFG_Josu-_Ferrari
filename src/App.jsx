@@ -18,7 +18,7 @@ const App = () => {
     <div className="flex">
       <SideBar open={open} setOpen={setOpen} Menus={Menus} />
       <div className="h-screen flex-1 p-7">
-        <h1 className="text-2xl font-semibold">Hola Mundo</h1>
+        
       </div>
     </div>
   );
