@@ -1,7 +1,7 @@
 const Dashboard = () => {
     return (
-        <div>
-            <h1 className="text-2xl font-semibold">Hola Papu</h1>
+        <div className="flex-1 h-screen p-7">
+            <h1 className="text-2xl font-semibold">Bienvenido a Getting things done</h1>
         </div>
     );
 };

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { memo } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-const SideBar = ({ open, setOpen, Menus}) => {
+const SideBar = ({ open, setOpen, Menus }) => {
     return (
         <div
             className={`${open ? "w-72" : "w-20"
@@ -34,18 +35,25 @@ const SideBar = ({ open, setOpen, Menus}) => {
     );
 };
 
-const MenuItem = ({ Menu, open }) => {
+const MenuItem = memo(({ Menu, open }) => {
+    const location = useLocation(); // Obtiene la ruta actual
+
+    // Verifica si la ruta actual coincide con la ruta del menú
+    const isActive = location.pathname === Menu.path;
+
     return (
         <li
-            className={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 
-            ${Menu.gap ? "mt-9" : "mt-2"} ${Menu.title === "Dashboard" && "bg-light-white"}`}
+            className={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-sm items-center gap-x-4 
+            ${Menu.gap ? "mt-9" : "mt-2"} ${isActive ? "bg-light-white text-white" : "text-gray-300"}`}
         >
-            <img src={`./src/assets/${Menu.src}.png`} />
-            <span className={`${!open && "hidden"} origin-left duration-200`}>
-                {Menu.title}
-            </span>
+            <Link to={Menu.path} className="flex items-center gap-x-4">
+                <img src={`./src/assets/${Menu.src}.png`} />
+                <span className={`${!open && "hidden"} origin-left duration-200`}>
+                    {Menu.title}
+                </span>
+            </Link>
         </li>
     );
-};
+});
 
 export default SideBar;
